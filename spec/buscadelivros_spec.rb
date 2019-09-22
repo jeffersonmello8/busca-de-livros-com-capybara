@@ -44,6 +44,14 @@ describe 'Buscando livros na casa do código', :buscanacasadocodigo do
         verificarsubtitulo('Construa aplicações Ruby com testes e especificações')
         verificarautor('Hugo Baraúna')   
     end 
-
+     
+    it 'Buscando livro de Selenium WebDriver', :livroselenium do
+        preencherlivro('selenium')
+        click_button 'buscar'
+        clicarnolivro('Selenium WebDriver: Descomplicando testes automatizados com Java')
+        verificarnomedolivro('Selenium WebDriver')
+        verificarsubtitulo('Descomplicando testes automatizados com Java')
+        verificarautor('Rafael Peixoto')
+    end 
 
 end
