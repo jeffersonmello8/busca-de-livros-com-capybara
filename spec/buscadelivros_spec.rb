@@ -24,7 +24,7 @@ describe 'Buscando livros na casa do código', :buscanacasadocodigo do
     end 
 
     before(:each) do 
-        visit 'https://www.casadocodigo.com.br/'
+        visit '/'
     end 
 
     it 'Buscando livro de Rspec', :livrorspec do
