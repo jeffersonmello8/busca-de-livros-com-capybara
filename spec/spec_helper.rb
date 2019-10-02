@@ -1,6 +1,6 @@
-require 'capybara'
-require 'capybara/rspec'
-require 'selenium-webdriver'
+require "capybara"
+require "capybara/rspec"
+require "selenium-webdriver"
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -10,14 +10,14 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
   config.shared_context_metadata_behavior = :apply_to_host_groups
-  config.include Capybara::DSL 
-  config.before(:example) do 
-    page.current_window.resize_to(1280,800)
-  end 
+  config.include Capybara::DSL
+  config.before(:example) do
+    page.current_window.resize_to(1280, 800)
+  end
 end
 
 Capybara.configure do |config|
-  config.default_driver = :selenium_chrome  
+  config.default_driver = :selenium_chrome_headless
   config.default_max_wait_time = 15
-  config.app_host = 'https://www.casadocodigo.com.br'
-end 
+  config.app_host = "https://www.casadocodigo.com.br"
+end
