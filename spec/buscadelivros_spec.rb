@@ -27,29 +27,44 @@ describe "Buscando livros na casa do código", :buscanacasadocodigo do
   end
 
   it "Buscando livro de Rspec", :livrorspec do
-    preencherlivro("rspec")
+    livro = "rspec"
+    chamada = "RSpec: Crie especificações executáveis em Ruby"
+    nomelivro = "RSpec"
+    titulo = "Crie especificações executáveis em Ruby"
+    autor = "Mauro George"
+    preencherlivro(livro)
     click_button "buscar"
-    clicarnolivro("RSpec: Crie especificações executáveis em Ruby")
-    verificarnomedolivro("RSpec")
-    verificarsubtitulo("Crie especificações executáveis em Ruby")
-    verificarautor("Mauro George")
+    clicarnolivro(chamada)
+    verificarnomedolivro(nomelivro)
+    verificarsubtitulo(titulo)
+    verificarautor(autor)
   end
 
   it "Buscando livro de Cucumber", :livrocucumber do
-    preencherlivro("cucumber")
+    livro = "cucumber"
+    chamada = "Cucumber e RSpec: Construa aplicações Ruby com testes e especificações"
+    nomelivro = "Cucumber e RSpec"
+    titulo = "Construa aplicações Ruby com testes e especificações"
+    autor = "Hugo Baraúna"
+    preencherlivro(livro)
     click_button "buscar"
-    clicarnolivro("Cucumber e RSpec: Construa aplicações Ruby com testes e especificações")
-    verificarnomedolivro("Cucumber e RSpec")
-    verificarsubtitulo("Construa aplicações Ruby com testes e especificações")
-    verificarautor("Hugo Baraúna")
+    clicarnolivro(chamada)
+    verificarnomedolivro(nomelivro)
+    verificarsubtitulo(titulo)
+    verificarautor(autor)
   end
 
   it "Buscando livro de Selenium WebDriver", :livroselenium do
-    preencherlivro("selenium")
+    livro = "selenium"
+    chamada = "Selenium WebDriver: Descomplicando testes automatizados com Java"
+    nomelivro = "Selenium WebDriver"
+    titulo = "Descomplicando testes automatizados com Java"
+    autor = "Rafael Peixoto"
+    preencherlivro(livro)
     click_button "buscar"
-    clicarnolivro("Selenium WebDriver: Descomplicando testes automatizados com Java")
-    verificarnomedolivro("Selenium WebDriver")
-    verificarsubtitulo("Descomplicando testes automatizados com Java")
-    verificarautor("Rafael Peixoto")
+    clicarnolivro(chamada)
+    verificarnomedolivro(nomelivro)
+    verificarsubtitulo(titulo)
+    verificarautor(autor)
   end
 end
